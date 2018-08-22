@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SlidingMenu">
+        <attr name="slidingStyle">
+            <enum name="Left" value="1"/>
+            <enum name="LeftInner" value="2"/>
+            <enum name="Right" value="3"/>
+            <enum name="RightInner" value="4"/>
+        </attr>
+    </declare-styleable>
+</resources>
