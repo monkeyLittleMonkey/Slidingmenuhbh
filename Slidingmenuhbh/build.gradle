@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.trevonnling'
 
 android {
     compileSdkVersion 26
@@ -31,12 +33,4 @@ dependencies {
 }
 
 
-task makeJar(type: Copy) {
-    delete 'build/libs/SlidingMenuHbh.jar' //删除已经存在的jar包
-    from('build/intermediates/bundles/default/')//从该目录下加载要打包的文件
-    into('build/libs/')//jar包的保存目录
-    include('classes.jar')//设置过滤，只打包classes文件
-    rename('classes.jar', 'SlidingMenuHbh.jar')//重命名，SlidingMenuHbh.jar 根据自己的需求设置
-}
-makeJar.dependsOn(build)
 
